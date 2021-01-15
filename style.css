@@ -1,0 +1,14 @@
+body {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold",
+    sans-serif font-size 16px;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.header {
+  font-size: large;
+  font-weight: bold;
+  font-family: fantasy;
+}
