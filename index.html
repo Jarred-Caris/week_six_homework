@@ -3,41 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather App</title>
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
       crossorigin="anonymous"
     />
-
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
       crossorigin="anonymous"
     ></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body style="background-color: steelblue;" >
-    
+  <body style="background: steelblue">
     <nav class="navbar navbar-light bg-dark">
-      <a class="navbar-brand" href="#">
-        <h2 class="header" style="color: whitesmoke; font-size: larger; font-weight: bold; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">WEATHER DASHBOARD</h2>
-      </a>
+      <span class="navbar-brand mb-0 h1" style="color: aliceblue"
+        ><h2>WEATHER DASHBOARD</h2></span
+      >
     </nav>
-    <br>
+    <div class="card col-lg">
+      <div class="search">
+        <input type="text" class="search-bar" />
+        <button class="btn btn-primary" type="submit">search</button>
 
-    <div class="container">
-        <div class="row">
-          <div class="col-4">
-            <form id="weather-form">
-                <input type="text" id="weather-input">
-                <input class="btn btn-primary" type="button" value="Input">
-          </div>
-          <div class="col">
-            2 of 2
-          </div>
-        </div>
-    
-        
+        <h4 class="history">Search history</h4>
+      </div>
+    </div>
+    <div class="card weather">
+      <h2 class="city">Weather in your city</h2>
+      <img src="" alt="" class="icon" />
+      <div class="temperature"><h1>30°C</h1></div>
+      <br />
+      <div class="humidity">50%</div>
+      <div class="wind">40kmph</div>
+      <div class="uv">9.5</div>
+    </div>
   </body>
 </html>

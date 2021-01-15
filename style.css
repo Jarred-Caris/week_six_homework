@@ -1,14 +1,22 @@
-body {
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold",
-    sans-serif font-size 16px;
+.navbar {
+  display: flex;
+  padding: 30px;
+  margin: 10px;
+  border-radius: 30px;
+  font-family: "Open Sans", sans-serif;
 }
 
-.navbar-brand {
-  font-weight: bold;
+.card {
+  display: flex;
+  padding: 30px;
+  margin: 30px;
+  font-family: "Open Sans", sans-serif;
 }
 
-.header {
-  font-size: large;
-  font-weight: bold;
-  font-family: fantasy;
+.search-bar {
+  border-radius: 30px;
+}
+
+.btn {
+  border-radius: 30px;
 }
