@@ -9,15 +9,17 @@
 .card {
   display: flex;
   padding: 30px;
-  margin: 30px;
+  margin: 10px;
   font-family: "Open Sans", sans-serif;
-  border-radius: 80px;
+}
+.col-5 {
+  border-radius: 30px;
 }
 
 .search-bar {
-  border-radius: 30px;
+  border-radius: 20px;
 }
 
-.btn {
-  border-radius: 30px;
+#submit {
+  border-radius: 20px;
 }

@@ -31,21 +31,32 @@
     </nav>
     <div class="card col-lg" style="background: skyblue">
       <div class="search">
-        <input type="text" class="search-bar" />
-        <button class="searchBtn btn-primary" type="submit">search</button>
-
+        <input id="city" type="text" class="search-bar" />
+        <button id="submit" class="searchBtn btn-primary" type="submit">
+          search
+        </button>
+         <br>
         <h4 class="history">Search history</h4>
       </div>
     </div>
-    <div class="card weather" style="background: skyblue">
-      <h2 class="city">Weather in your city</h2>
-      <img src="" alt="" class="icon" />
-      <div class="temperature"><h1>30°C</h1></div>
-      <br />
-      <div class="humidity">50%</div>
-      <div class="wind">40kmph</div>
-      <div class="uv">9.5</div>
-    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="card weather col-5" style="background: skyblue">
+            <h2 class="location">Weather in your city</h2>
+            <img src="" alt="" class="icon" />
+            <div id="temp" class="temperature"><h1>30°C</h1></div>
+            <br />
+            <div id="humid" class="humidity">50%</div>
+            <div id="windSpeed" class="wind">40kmph</div>
+            <div id="uvIndex" class="uv">9.5</div>
+        </div>
+
+        <div class="card col-6 forecast" style="background: skyblue;">
+          <h2>5 day forecast</h2>
+        </div>
+      </div>
+    
   </body>
   <script src="script.js"></script>
 </html>

@@ -1,28 +1,39 @@
-var iconId = document.getElementById("icon");
-var tempId = document.getElementById("temperature");
-var humidityId = document.getElementById("humidity");
-var windId = document.getElementById("wind");
-var uvId = document.getElementById("uv");
+var iconId = document.getElementById(".icon");
+var locationId = document.getElementById("#city");
+var tempId = document.getElementById("#temp");
+var humidityId = document.getElementById("#humid");
+var windId = document.getElementById("#windSpeed");
+var uvId = document.getElementById("#uvIndex");
 var apiKey = "a0eaeb1750b072dd8c163d6a70ddb7ff";
+var searchButton = document.getElementById("#submit");
 
-$(".searchBtn").on("click", function (event) {
-  $(this).val();
+$(searchButton).on("click", function (event) {
   event.preventDefault();
-  var locationId = document.getElementById("city");
+  $(this).val(value);
 
-  localStorage.setItem(locationId);
-  console.log("search");
+  console.log(searchButton);
 });
 
 function displayWeather() {
-  var weather = $(this).attr("data-name");
   var queryURL =
     "https://api.openweathermap.org/data/2.5/weather?q=" +
     locationId +
     "&units=metric&appid=" +
     apiKey;
-  console.log(displayWeather);
+
   $.ajax({
     url: queryURL,
-  }).then(function (response) {});
+    method: "GET",
+  }).then(function (response) {
+    console.log(response);
+  });
 }
+
+//$(".searchBtn").on("click", function (event) {
+//$(this).val();
+//event.preventDefault();
+//var locationId = document.getElementById("city");
+
+//localStorage.setItem(locationId);
+//console.log("search");
+//});
