@@ -9,37 +9,6 @@ var apiKey = "a0eaeb1750b072dd8c163d6a70ddb7ff";
 var searchButton = $("#submit");
 var history = $("#buttonsView");
 var cityList;
-
-
-// generate previous search history in buttons
-
-// function renderButtons() {
-//   $("#buttons-view").empty();
-//   for (var i = 0; i < locationId.length; i++) {
-//     var add = $("<button>");
-//     add.addId("#submit");
-//     add.text(localStorageHistory[i]);
-//     $("#history").append(add);
-//     console.log("render");
-//   }
-// }
-
-// function generateButton() {
-//   var loadData = localStorage.getItem("history");
-//   if (loadData == null || loadData == "") return;
-
-//   var cityButtonArr = JSON.parse(loadData);
-
-//   for (i = 0; i < cityButtonArr.length; i++) {
-//     var create = $("<button>");
-//     create.attr("#submit", "btn btn-outline-secondary");
-//     create.attr("history", "button");
-//     create.text(cityButtonArr[i]);
-//     localStorageHistory.prepend(create);
-//   }
-// }
-
-
 var localStorageHistory = localStorage.getItem("history");
 
 
@@ -53,22 +22,23 @@ if (localStorageHistory === null) {
 
 generateButtons();
 function generateButtons() {
+  
   console.log(cityList)
   for (var i = 0; i < cityList.length; i++) {
        search = $("<button>").attr({
           "class": "history"
       });
       search.text(cityList[i]);
-
+      
       $(".cityList").append(search);
-
+      
     }
   };
 
 // add searches to array in local storage
 function addToSearchHistory(cityName) {
   var localStorageHistory = localStorage.getItem("history");
-  // var existing = localStorageHistory.includes(cityList[""]);
+   
 
   if (localStorageHistory === null) {
      cityList = [];
@@ -77,6 +47,7 @@ function addToSearchHistory(cityName) {
   }
   cityList.push(cityName);
   localStorage.setItem("history", JSON.stringify(cityList));
+  
 }
 
 // initiate search when city name entered and get information from api
@@ -103,6 +74,7 @@ $(searchButton).on("click", function (displayWeather) {
 
     addToSearchHistory(cityName);
     generateButtons();
+   
 
     var tempId = $("#temp");
     tempId.text("Temperature: " + response.main.temp + "°C");
@@ -119,6 +91,8 @@ $(searchButton).on("click", function (displayWeather) {
     let lon = response.coord.lon;
     let lat = response.coord.lat;
 
+
+    // Uv index pull from api
      var uvIndex = "http://api.openweathermap.org/data/2.5/uvi?lat=" + lat + "&lon=" + lon + "&appid=" + apiKey;
      $.ajax({
       url: uvIndex,
@@ -140,15 +114,15 @@ $(searchButton).on("click", function (displayWeather) {
       uvId.append(uvSpan);
       $("#uvIndex").append(uvId);
   });
-  // uv index search function
+ 
   
 
   });
-
+// forecast
   var forecastURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + locationId + "&units=metric&appid=" + apiKey
   $.ajax({
       url: forecastURL,
-      method: "GET",
+     
   }).then(function (response) {
 
     for (var i = 0; i < cityList.length; i++) {

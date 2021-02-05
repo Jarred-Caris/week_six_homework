@@ -9,7 +9,7 @@ For this weeks project, we were tasked with creating a weather search applicatio
 
 ## This is the end result
 
-![Weather application](assets.weather.PNG)
+![Weather application](assets/weather.PNG)
 
 ## Where to access code
 
