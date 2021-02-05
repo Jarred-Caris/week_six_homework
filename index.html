@@ -23,12 +23,16 @@
       rel="stylesheet"
     />
   </head>
+   <!-- Navbar
+  
+  -->
   <body style="background: steelblue">
     <nav class="navbar navbar-light bg-dark">
       <span class="navbar-brand mb-0 h1" style="color: aliceblue"
         ><h2>WEATHER DASHBOARD</h2></span
       >
     </nav>
+    <!-- search function -->
     <div class="card col-lg" style="background: skyblue">
       <div class="search">
         <input id="city" type="text" class="search-bar" />
@@ -36,27 +40,33 @@
           search
         </button>
          <br>
-        <h4 class="history">Search history</h4>
+        <h4 id= "buttonsView" class="history">Search history</h4><div class="cityList"></div>
       </div>
     </div>
-
+     
+    <!-- weather display box -->
     <div class="container">
       <div class="row">
         <div class="card weather col-5" style="background: skyblue">
             <h2 class="location">Weather in your city</h2>
+            <h2 id="cityName"></h2>
             <img src="" alt="" class="icon" />
-            <div id="temp" class="temperature"><h1>30°C</h1></div>
+            <div id="temp" class="temperature"><h2>Temperature</h2></div>
             <br />
-            <div id="humid" class="humidity">50%</div>
-            <div id="windSpeed" class="wind">40kmph</div>
-            <div id="uvIndex" class="uv">9.5</div>
+            <div id="humid" class="humidity">Humidity</div>
+            <div id="windSpeed" class="wind">Wind Speed</div>
+            <div id="uvIndex" class="uv">UV index</div>
         </div>
-
+        <!-- 5 day forecast box -->
         <div class="card col-6 forecast" style="background: skyblue;">
-          <h2>5 day forecast</h2>
+          <h2>3 day forecast</h2>
         </div>
       </div>
-    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"></script>
+      <script src="script.js"></script>
   </body>
-  <script src="script.js"></script>
+  
 </html>

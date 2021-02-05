@@ -23,3 +23,15 @@
 #submit {
   border-radius: 20px;
 }
+
+.high {
+  background-color: red;
+}
+
+.moderate {
+  background-color: yellow;
+}
+
+.low {
+  background-color: green;
+}
